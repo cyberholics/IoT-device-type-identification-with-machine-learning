@@ -1,5 +1,6 @@
 # IoT-device-type-identification-with-machine-learning
 
+
 An IoT device is any device that is connected to the internet and can collect or transmit data. Hackers can add their own IoT device, or a malicious IoT device, to an organization's network. Once the hacker has added their own IoT device to the network, they can use it to gain access to other devices on the network, steal data, or launch attacks.
 Therefore, it is important to identify when a new IoT device has been added to a network and understand what kind of device it is.
 
@@ -11,6 +12,21 @@ The data was gotten from [Kaggle](https://www.kaggle.com/datasets/fanbyprinciple
 
 ## Project files and folders explained
 - **Input:** This folder contains the data used for this project
-- **Notebook:** This folder contains the Jupyter Notebook used for Exploratory data analysis, data preprocessing, feature engineering and modeling
+- **Notebook:** This folder contains the Jupyter Notebook used for Exploratory data analysis, data preprocessing, feature engineering and modeling (Check it out to see how I came up with the final model)
 - **src:** This is where all the Python scripts associated with this project are stored
-- **model:** This is where the trained final model is stored 
+- **model:** This is where the trained final model is stored
+
+## Project demo
+I used the trained model to make inferences with random IoT device network traffic analysis sample data
+
+## Project Summary
+- I got IoT device network traffic analysis data from Kaggle, the data contains network traffic analysis for the following IoT devices security_camera', 'TV', 'smoke_detector', ``` ```'thermostat',
+       'water_sensor', 'watch', 'baby_monitor', 'motion_sensor', 'lights',
+       'socket'```
+- I performed feature engineering on the data by removing features with low variance. Features with low variance tend to have constant values and do not contribute meaningfully to the model's learning process
+- I pre-processed the data by performing standardization. Standardization is a method that transforms the training data to have a mean of 0 and a variance of 1.
+In standardization, the goal is to transform the data in such a way that it has a mean (average) of 0 and a variance (standard deviation squared) of 1. This transformation makes the data have a standard normal distribution, which can be beneficial for the machine learning algorithm
+- I used different algorithms (Logistic Regression, Random Forest Classifier, and Gradient Boosting Classifier) to build a model. Among these algorithms, I achieved the best performance with the Random Forest Classifier. Therefore, I selected the Random Forest Classifier as my final model
+- I evaluated the final model using the accuracy score and a cross-validation technique. I achieved a 90% accuracy on the model, with an average accuracy of 86% across 10 folds of cross-validation, this indicated my model is not overfitting
+- Finally, I deployed the final model as a web service in a Docker container. With that, I can use the model to make inferences from the container
+  
