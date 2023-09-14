@@ -9,3 +9,8 @@ Machine learning can be used as a network security solution to identify the type
 The power of a machine learning solution lies in its training data. Therefore, in this project, I took advantage of datasets generated from IoT device network traffic analysis because, unlike data generated from device fingerprinting, network traffic analysis data cannot be spoofed.
 The data was gotten from [Kaggle](https://www.kaggle.com/datasets/fanbyprinciple/iot-device-identification). 
 
+## Project files and folders explained
+- **Input:** This folder contains the data used for this project
+- **Notebook:** This folder contains the Jupyter Notebook used for Exploratory data analysis, data preprocessing, feature engineering and modeling
+- **src:** This is where all the Python scripts associated with this project are stored
+- **model:** This is where the trained final model is stored 
