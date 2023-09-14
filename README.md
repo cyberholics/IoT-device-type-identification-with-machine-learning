@@ -28,4 +28,5 @@ In standardization, the goal is to transform the data in such a way that it has 
 - I used different algorithms (Logistic Regression, Random Forest Classifier, and Gradient Boosting Classifier) to build a model. Among these algorithms, I achieved the best performance with the Random Forest Classifier. Therefore, I selected the Random Forest Classifier as my final model
 - I evaluated the final model using the accuracy score and a cross-validation technique. I achieved a 90% accuracy on the model, with an average accuracy of 86% across 10 folds of cross-validation, this indicated my model is not overfitting
 - Finally, I deployed the final model as a web service in a Docker container. With that, I can use the model to make inferences from the container
-  
+
+[Technical article about this solution]()
